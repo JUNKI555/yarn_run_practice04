@@ -4,7 +4,21 @@
   "main": "index.js",
   "repository": "git@github.com:JUNKI555/yarn_run_practice04.git",
   "author": "JUNKI555 <junki555@gmail.com>",
-  "license": "MIT",
+  "license": "WTFPL License",
+  "scripts": {
+    "cleanjs": "rimraf ./public/js/",
+    "cleancss": "rimraf ./public/css/",
+    "clean": "run-s cleanjs cleancss copyumbrella",
+    "postcss": "postcss src/**/*.css -d ./public/css",
+    "watchpostcss": "postcss src/**/*.css -d ./public/css --watch",
+    "copyumbrella": "cpy node_modules/umbrellajs/umbrella.esm.js public/js/ --rename=umbrella.js",
+    "ttsc": "ttsc",
+    "watchts": "ttsc --watch",    
+    "cleanwatch": "run-p clean watchpostcss watchts",
+    "serve": "sirv public --port 8080",
+    "build": "run-s cleanjs cleancss copyumbrella postcss ttsc",
+    "dev": "run-p cleanwatch serve"
+  },
   "devDependencies": {
     "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
     "cpy-cli": "^3.1.1",
