@@ -66,6 +66,16 @@
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true,  /* Disallow inconsistently-cased references to the same file. */
     "plugins": [
+      { 
+        "transform": "ts-transform-import-path-rewrite", 
+        "import": "transform",
+        "alias": {
+            "^(umbrella)$": "./$1.js"
+        },
+        "after": true,
+        "afterDeclarations": true, 
+        "type": "config" 
+      },
       {
         "transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
         "after": true,
