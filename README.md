@@ -9,6 +9,13 @@
 ## build, watch tsc and start a static file server
 `yarn dev`
 
+## video player test
+`yarn ttsc`
+`yarn replacehls`
+`yarn replacemap`
+`yarn serve`
+access to `localhost:8080/video_player.html`
+
 ## Reference sources
 - 2020/11版：TypeScript+UmbrellaJS+PostCSSの開発環境を yarn で構築する
   - https://zenn.dev/junki555/articles/8f411ca2b33f7f355062
