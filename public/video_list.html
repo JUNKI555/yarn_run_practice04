@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <link href="./css/global.css" rel="stylesheet" type="text/css">
     <link href="./css/tailwindcss.css" rel="stylesheet" type="text/css">
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/video_list.js"></script>
   </head>
-  <body class="bg-gray-700">
+  <body class="text-white bg-gray-700">
   <main>
     <div class="relative">
       <div class="max-w-7xl mx-auto px-4 md:px-3">
@@ -18,7 +18,7 @@
           <div class="md:flex items-center max-w-xs mx-auto md:flex-1 lg:w-0">
             <input placeholder="Search" class="hidden md:inline-block border border-gray-400 bg-gray-200 focus:bg-white text-gray-900 appearance-none w-full rounded px-2 py-1 focus:outline-black">
             <div class="px-3 py-4">
-              <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
+              <svg class= xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
               </svg>
             </div>
@@ -31,60 +31,73 @@
       </div>
     </div>
     <div class="flex w-full h-full">
-      <div class="flex-none w-40 text-white items-center h-full">
-        <div class="grid grid-cols-1 gap-0 px-2 py-2">
-          <div class="flex flex-row h-10 items-center bg-gray-500">
+      <div class="flex-none w-48 items-center h-full">
+        <div class="grid grid-cols-1 gap-0 py-2">
+          <div class="flex flex-row h-10 items-center pl-2 bg-gray-500">
             <svg xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>ホーム
           </div>
-          <div class="flex flex-row h-10 items-center">
+          <div class="flex flex-row h-10 items-center pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
             </svg>急上昇
           </div>
-          <div class="flex flex-row h-10 items-center">
+          <div class="flex flex-row h-10 items-center pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
             </svg>お気に入り
           </div>
-          <div class="flex flex-row h-10 items-center">
+          <div class="flex flex-row h-10 items-center pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
               <path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
             </svg>ライブラリ
           </div>
-          <div class="flex flex-row h-10 items-center">
+          <div class="flex flex-row h-10 items-center pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" width='32' height='32' viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
             </svg>履歴
           </div>
-          <div class="text-xs">VideoListについて</div>
-          <div class="text-xs">お問い合わせ</div>
-          <div class="text-xs">利用規約</div>
+          <div class="text-xs pl-2">VideoListについて</div>
+          <div class="text-xs pl-2">お問い合わせ</div>
+          <div class="text-xs pl-2">利用規約</div>
         </div>
       </div>
       <div class="flex-grow text-white items-center h-full">
-        <div class="grid grid-cols-4 gap-4 px-4 py-4">
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+        <div id="thumbnail_list" class="grid grid-cols-4 gap-4 px-24 py-4">
+          <div class="bg-teal-400 h-56 rounded-md flex items-center justify-center text-2xl font-extrabold">
             1
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="h-56">
+            <div class="mb-2">
+              <img class="w-full h-40" src="https://via.placeholder.com/150/92c952">
+            </div>
+            <div class="flex">
+              <img class="flex-none w-10 h-10 rounded-full" src="https://via.placeholder.com/150/92c952">
+              <div class="flex-grow ml-4">
+                <div>Foo tilte A</div>
+                <div class="text-sm">artist</div>
+                <div class="text-sm">2020/11/05</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             2
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             3
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             4
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             5
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             6
           </div>
-          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
+          <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-2xl font-extrabold">
             7
           </div>
           <div class="bg-teal-400 h-12 rounded-md flex items-center justify-center text-white text-2xl font-extrabold">
