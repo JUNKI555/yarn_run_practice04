@@ -5,5 +5,8 @@ module.exports = (ctx) => ({
     require('tailwindcss'),
     require('postcss-nested'),
     require('autoprefixer'),
+    require('cssnano')({
+      preset: 'default',
+    }),
   ],
 })
